@@ -1,0 +1,2 @@
+por ser node.js nao da para executar <script src="audio_transcript.mjs"></script> porque da erro, entao 
+precisa 
