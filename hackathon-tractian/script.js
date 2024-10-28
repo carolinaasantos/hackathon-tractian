@@ -1,23 +1,52 @@
-const inputBox = document.getElementById("input-box");
-const listContainer = document.getElementById("list-container");
+const inputBox1 = document.getElementById("input-box1");
+const inputBox2 = document.getElementById("input-box2");
+const listContainer1 = document.getElementById("list-container1");
+const listContainer2 = document.getElementById("list-container2");
 
 function addTask() {
-    if (inputBox.value === '') {
+    if (inputBox1.value === '') {
         alert("You must write something!");
     }
     else {
         let li = document.createElement("li");
-        li.innerHTML = inputBox.value;
-        listContainer.appendChild(li);
+        li.innerHTML = inputBox1.value;
+        listContainer1.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
-    inputBox.value = "";
+    inputBox1.value = "";
     saveData();
 }
 
-listContainer.addEventListener("click", function(e) {
+function addEquipment() {
+    if (inputBox2.value === '') {
+        alert("You must write something!");
+    }
+    else {
+        let li = document.createElement("li");
+        li.innerHTML = inputBox2.value;
+        listContainer2.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+    }
+    inputBox2.value = "";
+    saveData();
+}
+
+listContainer1.addEventListener("click", function(e) {
+    if (e.target.tagName === "LI") {
+        e.target.classList.toggle("checked");
+        saveData()
+    }
+    else if (e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+        saveData()
+    }
+}, false);
+
+listContainer2.addEventListener("click", function(e) {
     if (e.target.tagName === "LI") {
         e.target.classList.toggle("checked");
         saveData()
@@ -33,9 +62,18 @@ function saveData() {
 }
 
 function showTask() {
-    listContainer.innerHTML = localStorage.getItem("data");
+    listContainer1.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+function showTask() {
+    listContainer2.innerHTML = localStorage.getItem("data");
+}
+showTask();
+
+function processData() {
+
+}
 
 /*const todos = [
     {
