@@ -71,6 +71,22 @@ function showTask() {
 }
 showTask();
 
+function pegarDataAtual(){
+    // Obter a data atual
+    const dataAtual = new Date();
+
+    // Formatar a data como dia/mês/ano
+    const dia = String(dataAtual.getDate()).padStart(2, '0');
+    const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+    const ano = dataAtual.getFullYear();
+
+    // Combinar em um formato legível
+    const dataFormatada = `${dia}/${mes}/${ano}`;
+
+    // Inserir a data no elemento HTML
+    document.getElementById("data").textContent = dataFormatada;
+}
+
 function processData() {
 
 }
