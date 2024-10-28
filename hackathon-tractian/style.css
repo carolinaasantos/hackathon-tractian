@@ -1,30 +1,69 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+body {
+    background: linear-gradient(180deg, #F4F4F5, #B3CEFA);
+    width: full;
+    height: full;
 }
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(175deg, #153677, #f240e0);
     padding: 10px;
+
+}
+.titulo {
+    margin: 82px 0px 0px 64px;
+    color: #1E293B;
+    font-size: 16px;
+    display: inline-block;
+}
+.texto {
+    margin: 18px 0px 0px 64px;
+    color: #1E293B;
+    font-size: 16px;
+    display: inline-block;
 }
 .todo-app {
     width: 100%;
-    max-width: 540px;
+    max-width: 640px;
     background: #fff;
-    margin: 100px auto 20px;
+    margin: 36px 0px 80px 55px;;
     padding: 40px 30px 70px;
     border-radius: 10px;
+    display: inline-block;
+    border: 2px solid #1E293B;
 }
 .todo-app h2 {
+    color: #1E293B;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+.grab-file {
+    width: 50%;
+    max-width: 540px;
+    background: #fff;
+    margin: 20px 80px;
+    padding: 20px 30px 40px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.grab-file h2 {
     color: #002765;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-.todo-app h2 img {
+.grab-file h2 img {
     width: 30px;
     margin-left: 10px;
 }
@@ -62,6 +101,8 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    background-color: #F1F6FF;
+    border-radius: 10px;
 }
 ul li::before {
     content: '';
@@ -98,9 +139,56 @@ ul li span:hover {
     background: #edeef0;
 }
 .assignature {
+    position: absolute;
     font-size: 15px;
     font-weight: 300;
     color: #002765;
-    margin: -15px 0px 0px -400px;
+    margin: 0px 0px 0px -400px;
+    text-align: center;
+}
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+}
+.submission {
+    display: flex;
+    margin: 0px 0px 0px 121px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#input-file {
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid #838993;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-bottom: 0px;
+    width: 464px;
+}
+#button-file {
+    align-items: center;
+    width: 203px;
+    height: 40px;
+    border: 1px solid white;
+    background: #377DF4;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+.submission button img {
+    width: 20px;
+    margin-left: 10px;
     text-align: center;
 }
