@@ -1,0 +1,19 @@
+Prompts:
+
+1- Análise as instruções do supervisor:
+Input: Analise as instruções: “Transcrição do áudio”.
+Output: Dados relevantes sobre o áudio, como duração, qualidade e formato.
+
+2- Faca a lista de tarefas:
+Input: Com base nos dados acima, faça uma lista de tarefas a serem realizadas hoje, no formato de checklist (to-do list). Cada tarefa deve ser simples e clara para facilitar a execução. Sugira entre 5 a 10 tarefas.
+Output: Lista de tarefas.
+
+3- Faca a lista de ferramentas:
+Input: Em seguida, faça uma lista detalhada das ferramentas necessárias para cada tarefa. Organize-as em formato de checklist e, sempre que possível, inclua o código SAP de cada ferramenta ou equipamento (no arquivo xlsx estão as ferramentas e códigos correspondentes). Evite repetir elementos já listados. Agrupe as ferramentas por tarefa sempre que aplicável.
+Arquivo: <<colinha de códigos SAP.xlsx>>
+Output: Lista de ferramentas com código SAP, organizada por tarefa.
+
+4- Análise de manual:
+Input: Resuma as partes mais importantes do manual de instruções em inglês, priorizando seções que abordem a resolução de problemas relacionados às tarefas listadas. Em seguida, traduza o resumo para o português.
+Arquivo: <<Manual X em inglês>>
+Output: Instruções resumidas do manual, traduzidas para o português.
