@@ -17,6 +17,6 @@ Figma
 ## Descrição de Aúdio
 Mediante o chatgpt conseguimos trascriver um audio para um arquivo txt
 
-## Criação de lista de tarefas
+## Criação de lista de tarefas e ferramentas
 
-## Criação de lista de ferramentas
+
