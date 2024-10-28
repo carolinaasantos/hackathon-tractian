@@ -27,11 +27,18 @@ body {
     font-size: 16px;
     display: inline-block;
 }
+.lists {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+}
 .todo-app {
-    width: 100%;
-    max-width: 640px;
+    width: auto;
+    height: auto;
+    min-width: 640px;
     background: #fff;
-    margin: 36px 0px 80px 55px;;
+    margin: 36px 0px 80px 55px;
     padding: 40px 30px 70px;
     border-radius: 10px;
     display: inline-block;
@@ -88,11 +95,16 @@ button {
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: #ff5945;
+    background: #377DF4;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 ul li {
     list-style: none;
@@ -121,7 +133,7 @@ ul li.checked {
     text-decoration: line-through;
 }
 ul li.checked::before {
-    background-image: url(images/checked.png);
+    background-image: url(images/check_circle.svg);
 }
 ul li span {
     position: absolute;
@@ -131,7 +143,7 @@ ul li span {
     height: 40px;
     font-size: 22px;
     color: #555;
-    line-height: 40px;
+    line-height: 30px;
     text-align: center;
     border-radius: 50%;
 }
@@ -139,11 +151,10 @@ ul li span:hover {
     background: #edeef0;
 }
 .assignature {
-    position: absolute;
     font-size: 15px;
     font-weight: 300;
     color: #002765;
-    margin: 0px 0px 0px -400px;
+    margin: 0px 0px 0px 20px;
     text-align: center;
 }
 .cabecalho {
@@ -191,4 +202,40 @@ ul li span:hover {
     width: 20px;
     margin-left: 10px;
     text-align: center;
+}
+.manuais {
+    width: auto;
+    height: auto;
+    min-width: 1340px;
+    background: #fff;
+    margin: 0px 0px 80px 55px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 2px solid #1E293B;
+}
+.manuais h2 {
+    color: #377DF4;
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+}
+.manuais h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+.bloco {
+    width: 100%;
+    max-width: 268px;
+    height: 139px;
+    background: hsl(0, 0%, 100%);
+    margin: 0px 20px 20px 0px;
+    padding: 15px 15px 70px;
+    border-radius: 16px;
+    display: inline-block;
+    border: 2px solid #377DF4;
+}
+#texto-motor{
+    font-size: 24;
 }

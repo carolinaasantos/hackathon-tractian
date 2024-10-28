@@ -1,5 +1,6 @@
 const inputBox1 = document.getElementById("input-box1");
 const inputBox2 = document.getElementById("input-box2");
+const inputFile = document.getElementById("input-file");
 const listContainer1 = document.getElementById("list-container1");
 const listContainer2 = document.getElementById("list-container2");
 
@@ -58,7 +59,8 @@ listContainer2.addEventListener("click", function(e) {
 }, false);
 
 function saveData() {
-    localStorage.setItem("data", listContainer.innerHTML);
+    localStorage.setItem("data", listContainer1.innerHTML);
+    localStorage.setItem("data", listContainer2.innerHTML);
 }
 
 function showTask() {
@@ -72,28 +74,23 @@ function showTask() {
 showTask();
 
 function processData() {
-
+    if (inputFile.value === '') {
+        alert("You must upload a document!");
+    }
+    inputFile.value = "";
+    criarTarefas();
 }
 
-/*const todos = [
-    {
-        'check': true,
-        'name': 'Danilo',
-    },
-    {
-        'check': true,
-        'name': 'Danilo',
-    },
-    {
-        'check': true,
-        'name': 'Danilo',
-    },
-    {
-        'check': true,
-        'name': 'Danilo',
-    }
-]
+// Data atual
+const dataAtual = new Date();
 
-todos.map((item) => {
-    item.name
-})*/
+// Formatar a data como dia/mês/ano
+const dia = String(dataAtual.getDate()).padStart(2, '0');
+const mes = String(dataAtual.getMonth() + 1).padStart(2, '0'); // Janeiro é 0!
+const ano = dataAtual.getFullYear();
+
+// Combinar em um formato legível
+const dataFormatada = `${dia}/${mes}/${ano}`;
+
+// Inserir a data no elemento HTML
+document.getElementById("data").textContent = dataFormatada;
