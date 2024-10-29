@@ -3,8 +3,11 @@ Neste projeto, desenvolvido durante o Hackathon da Tractian em Outubro de 2024 d
 
 ## Equipe
 Carolina Santos - Desenvolvedora Front-end
+
 Ivan Fernando Rizzi - Desenvolvedor Back-end
+
 Matheo Duarte - Desenvolvedor de Prompt
+
 Nicole Ramos - UX/UI Designer
 
 ## Ferramentas e Tecnologias Utilizadas
